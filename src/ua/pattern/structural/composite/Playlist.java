@@ -13,12 +13,16 @@ public class Playlist implements IComponent {
 
     @Override
     public void play() {
-        // play song
+        for (IComponent component : playlist) {
+            component.play();
+        }
     }
 
     @Override
     public void setPlaybackSpeed(float speed) {
-        // set playback speed
+        for (IComponent component : playlist) {
+            component.setPlaybackSpeed(speed);
+        }
     }
 
     @Override
